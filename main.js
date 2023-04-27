@@ -6,3 +6,4 @@ nftcontainer.addEventListener('click', showeye);
 function showeye (){
     eye.style.display = 'grid';
 }
+
