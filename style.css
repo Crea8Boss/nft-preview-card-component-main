@@ -1,0 +1,176 @@
+:root {
+    --color-white: hsl(0, 0%, 100%);
+    --color-primary: hsl(215, 51%, 70%);
+    --color-active: hsl(178, 100%, 50%);
+    
+    --color-line: hsl(215, 32%, 27%);
+    --color-cardbg: hsl(216, 50%, 16%);
+    --color-mainbg: hsl(217, 54%, 11%);
+    --color-shadow: hsla(232, 79%, 5%, 0.8);
+
+    --transition: all 400ms ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+    color: var(--color-primary);
+    background: var(--color-mainbg);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+p {
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+.bottom-margin {
+    margin-bottom: 1.2rem;
+}
+
+/*END OF GENERAL STYLING*/
+
+.container {
+    width: 40%;
+    height: 60%;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    background: var(--color-cardbg);
+    margin: 0 auto;
+    box-shadow: 0 1.2rem 1.5rem var(--color-shadow);
+}
+
+.nft-container {
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.nft-container:hover {
+    cursor: pointer;
+    background: var(--color-active);
+    transition: var(--transition);
+} 
+
+.nft-container > .nft-image {
+    width: 100%;
+    height: 100%;
+    opacity: 50%;
+}
+
+.nft-container > .eye {
+    position: absolute;
+    display: none;
+}
+
+.nft-name:hover {
+    color: var(--color-active);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.nft-offer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-line);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.nft-offer__price {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.nft-offer__time {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.nft-offer__price > span {
+    color: var(--color-active);
+    font-weight: 400;
+}
+
+.footer {
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer > .avatar {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--color-white);
+    border-radius: 50%;
+}
+
+.footer > p > a {
+    color: var(--color-white);
+}
+
+.footer > p > a:hover {
+    color: var(--color-active);
+    transition: var(--transition);
+}
+
+.attribution {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+
+    .bottom-margin {
+        margin-bottom: 0.7rem;
+    }
+    
+    h1 {
+        font-size: 0.85rem;
+        font-weight: 400;
+    }
+
+    .container {
+        padding-bottom: 1rem;
+    }
+
+    .container > p {
+        font-size: 0.7rem;
+    }
+
+    .footer > p {
+        font-size: 0.7rem;
+    }
+}
